@@ -37,19 +37,22 @@ function App() {
     });
   }; 
 
-  // return (
-  //   <div className='App'>
-  //     <h1>Battleships</h1>
-  //     {connected ? <p>Connected to server</p> : <p>Connecting...</p>}
-  //   </div>
-  // );
-
   return (
-    <div style = {{ padding: '1rem' }}>
-      <h1>Your Board</h1>
-      <GameBoard board = {board} isInteractive onCellClick={handleCellClick} />
+    <div className='App'>
+    { connected ? (
+      <div style={{ padding: '1rem' }}>
+        <h1>Your Board</h1>
+        <GameBoard board={board} isInteractive onCellClick={handleCellClick} />
+      </div>
+    ) : (
+      <div>
+        <h1>Connecting...</h1>
+        <p>Please wait while we establish a connection to the server.</p>
+      </div>
+    )
+    }
     </div>
-  );
+  )
 }
 
 export default App;
