@@ -1,0 +1,31 @@
+.game-board {
+    display: inline-block;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .cell.empty {
+    background-color: #f0f0f0;
+  }
+  
+  .cell.ship {
+    background-color: #888;
+  }
+  
+  .cell.hit {
+    background-color: red;
+  }
+  
+  .cell.miss {
+    background-color: white;
+  }
+  
